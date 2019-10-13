@@ -1,2 +1,9 @@
 # AWSContest_fORged-by-Machines
-Contest repo
+The code is written in Java. The repository contains Netbeans 11 project. However, you can find the compiled version in “FinalDist” folder. By running the code, you will see a GUI. There is button for loading the data. The data has to be in the same format of the training data provided i.e. first column is year that is not repeated until next year, next column is month, and next column is demand. Parameters are described below:
+-Initial inventory: This implies the initial inventory on the month that we don’t have the demand data anymore. By default, it should be 73.
+-Known until month: This parameter determines how many months were known beforehand. Total cost calculations ignore the known months. By default, it should be 120.
+-Warmup months: This parameter is useful when it is intended to have “Known until month=0”. The problem is that there should be a minimum number of known months to start predictions. Therefore, this parameter should be exactly the same as “Known until month=120” because known months are also warmup months for the models.
+-Num CPU(threads): This parameter is for parallel processing. If the number is set to 1, software runs in serial and if it exceeds 30, it’s redundant. The value should be around 24. Most of the algorithms run fast and the bottlenecks are ensemble learners. Therefore, setting this number more than the number of cores will not utilize all CPU power.
+-Singular algorithm checkbox: This checkbox is a controller to whether do Active Algorithm method or one single algorithm.
+
+The GUI automatically lists the best algorithms while running in single algorithm mod. To run the code, Java8 is required. This software is made by Azul Zulu OpenJDK. The final result is saved as CSV file in the current directory of application. This directory when ran from Netbeans is the root folder of the project and if ran outside is the folder that the Jar file exists.
