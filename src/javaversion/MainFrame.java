@@ -160,7 +160,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabel1.setText("Known until month:");
 
-        jSpinner1.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jSpinner1.setModel(new javax.swing.SpinnerNumberModel(120, 0, null, 1));
 
         jLabel2.setText("Num CPU(threads):");
 
@@ -173,11 +173,11 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabel4.setText("Initial inventory:");
 
-        jSpinner3.setModel(new javax.swing.SpinnerNumberModel(60, 0, null, 1));
+        jSpinner3.setModel(new javax.swing.SpinnerNumberModel(73, 0, null, 1));
 
         jLabel5.setText("Warmup months:");
 
-        jSpinner4.setModel(new javax.swing.SpinnerNumberModel(20, 14, null, 1));
+        jSpinner4.setModel(new javax.swing.SpinnerNumberModel(120, 14, null, 1));
 
         jTextPane1.setText("the results for each item in the list below is saved on a saparate file");
         jTextPane1.setEnabled(false);
